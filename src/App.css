@@ -1,38 +1,266 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text {
+    color: '#EBFFED';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: local('OpenSansRegular'),
+        url(./fonts/OpenSans-Regular.ttf) format('truetype');
+    font-weight: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+    font-family: 'OpenSansLight';
+    src: local('OpenSansLight'),
+        url(./fonts/OpenSans-Light.ttf) format('truetype');
+    font-weight: normal;
 }
 
-.App-link {
-  color: #61dafb;
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #00071c;
+}
+ul {
+    position: relative;
+    display: flex;
+    transform: rotate(-0deg) skew(0deg);
+    transform-style: preserve-3d;
+}
+ul li {
+    position: relative;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    margin: 0px 20px;
+}
+ul li:before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    width: 100%;
+    height: 10px;
+    background: #2a2a2a;
+    transform-origin: top;
+    transform: skewX(-41deg);
+}
+ul li:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -9px;
+    width: 9px;
+    height: 100%;
+    background: #2a2a2a;
+    transform-origin: right;
+    transform: skewY(-49deg);
+}
+ul li span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    background: #2a2a2a;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px !important;
+    transition: 1.5s ease-out;
+}
+ul li:hover span {
+    z-index: 1000;
+    transition: 0.3s;
+    color: #fff;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+ul li:hover span:nth-child(5) {
+    transform: translate(25px, -25px);
+    opacity: 1;
+}
+ul li:hover span:nth-child(4) {
+    transform: translate(18px, -18px);
+    opacity: 0.8;
+}
+ul li:hover span:nth-child(3) {
+    transform: translate(12px, -12px);
+    opacity: 0.6;
+}
+ul li:hover span:nth-child(2) {
+    transform: translate(5px, -5px);
+    opacity: 0.4;
+}
+ul li:hover span:nth-child(1) {
+    transform: translate(0px, 0px);
+    opacity: 0.2;
+}
+ul li:nth-child(1):hover span {
+    background: #4267b2 !important;
+}
+ul li:nth-child(2):hover span {
+    background: #333 !important;
+}
+ul li:nth-child(3):hover span {
+    background: #e1306c !important;
+}
+ul li:nth-child(4):hover span {
+    background: #2867b2 !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hexagon-wrapper {
+    margin: auto;
+    display: flex;
+    text-align: initial;
+    width: 80px;
+    height: 80px;
+    cursor: 'pointer';
+    margin-left: 15px;
+}
+
+.hexagon {
+    position: relative;
+    width: 46%;
+    height: 80%;
+    margin: auto;
+    color: white;
+    background: linear-gradient(-180deg, #564d85, #1d1a2c);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.hexagon i {
+    z-index: 1;
+    margin: auto;
+    font-size: 25px;
+    color: transparent;
+    background: linear-gradient(45deg, #ebffed, #d8ffdd);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.hexagon:before,
+.hexagon:after {
+    position: absolute;
+    content: '';
+    background: inherit;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    transition: 0.3s;
+    transform-origin: center;
+}
+.hexagon:before {
+    transform: rotateZ(60deg);
+}
+.hexagon:after {
+    transform: rotateZ(-60deg);
+}
+.hexagon:hover {
+    border-radius: 50px;
+    transition: 0.3s;
+}
+.hexagon:hover:before {
+    border-radius: 50px;
+    transition: 0.3s;
+}
+.hexagon:hover:after {
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.exploreButton {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    border: solid rgba(255, 255, 255, 0.3) 1px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 1s;
+}
+.exploreButton span {
+    position: absolute;
+    top: 15px;
+    left: 60px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.7;
+}
+.exploreButton .line {
+    background: white;
+    position: absolute;
+    transition: none;
+    transform: scale(0);
+    opacity: 1;
+}
+.exploreButton .line:nth-child(1) {
+    transform-origin: 100% 100%;
+    height: 1px;
+    width: 20%;
+    bottom: 0;
+}
+.exploreButton .line:nth-child(4) {
+    transform-origin: 0 100%;
+    height: 1px;
+    width: 20%;
+    top: -1px;
+    right: 0;
+}
+.exploreButton .line:nth-child(2) {
+    transform-origin: 100% 100%;
+    height: 100%;
+    width: 1px;
+    bottom: 0;
+    left: -1px;
+}
+.exploreButton .line:nth-child(5) {
+    transform-origin: 100% 0;
+    height: 100%;
+    width: 1px;
+    bottom: 0;
+    right: -1px;
+}
+.exploreButton .line:nth-child(3) {
+    transform-origin: 0 100%;
+    height: 1px;
+    width: 100%;
+    top: -1px;
+    left: -1px;
+}
+.exploreButton .line:nth-child(6) {
+    transform-origin: 100% 0;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    right: -1px;
+}
+.exploreButton:hover > .line {
+    transform: scale(1);
+    opacity: 0;
+    transition: all 1s;
+}
+.exploreButton:hover > .line:nth-child(2),
+.exploreButton:hover > .line:nth-child(5) {
+    transition-delay: 0.5s;
+}
+.exploreButton:hover > .line:nth-child(3),
+.exploreButton:hover > .line:nth-child(6) {
+    transition-delay: 0.9s;
+}
+.exploreButton:hover {
+    background: rgba(255, 255, 255, 0.03);
 }
