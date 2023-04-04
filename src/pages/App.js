@@ -1,7 +1,5 @@
 import * as React from "react";
-// import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import anime from "animejs";
-// import { Button, Menu } from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import ContactScreen from "../components/ContactScreen";
 import ResumeScreen from "../components/ResumeScreen";
