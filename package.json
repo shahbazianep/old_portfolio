@@ -13,7 +13,7 @@
         "build": "gatsby build",
         "serve": "gatsby serve",
         "clean": "gatsby clean",
-        "deploy": "gh-pages -d public -b master"
+        "deploy": "gh-pages -d public master"
     },
     "dependencies": {
         "@emailjs/browser": "^3.10.0",

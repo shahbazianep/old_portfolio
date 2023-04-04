@@ -25,7 +25,7 @@ import AboutMeScreen from "../components/AboutMeScreen";
 var animationFinished = false;
 var loaded = false;
 
-export default class App extends React.Component {
+export default class DesktopApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = { landingButtonEnabled: false };
