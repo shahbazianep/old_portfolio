@@ -142,18 +142,21 @@ export default class App extends React.Component {
             opacity: [1, 0],
         });
         setTimeout(() => {
-            if (
-                document.getElementById("landingdeco") &&
-                document.getElementById("landingscreenbuttontext") &&
-                document.getElementById("landingarrow") &&
-                loaded
-            ) {
-                document.getElementById("landingdeco").style.cursor = "pointer";
-                document.getElementById(
-                    "landingscreenbuttontext"
-                ).style.cursor = "pointer";
-                document.getElementById("landingarrow").style.cursor =
-                    "pointer";
+            if (typeof document !== undefined) {
+                if (
+                    document.getElementById("landingdeco") &&
+                    document.getElementById("landingscreenbuttontext") &&
+                    document.getElementById("landingarrow") &&
+                    loaded
+                ) {
+                    document.getElementById("landingdeco").style.cursor =
+                        "pointer";
+                    document.getElementById(
+                        "landingscreenbuttontext"
+                    ).style.cursor = "pointer";
+                    document.getElementById("landingarrow").style.cursor =
+                        "pointer";
+                }
             }
         }, 5000);
     }
@@ -217,7 +220,7 @@ export default class App extends React.Component {
             easing: "easeOutExpo",
         });
 
-        if (dest == "#contactscreen") {
+        if (dest === "#contactscreen") {
             anime({
                 targets: [
                     "#linkcirc1",
@@ -596,18 +599,21 @@ export default class App extends React.Component {
                 opacity: [0, 0.8],
             });
             setTimeout(() => {
-                if (
-                    document.getElementById(`deco${menuIndex}`) &&
-                    document.getElementById(`arrow${menuIndex}`) &&
-                    document.getElementById(`buttontext${menuIndex}`)
-                ) {
-                    document.getElementById(`deco${menuIndex}`).style.cursor =
-                        "pointer";
-                    document.getElementById(`arrow${menuIndex}`).style.cursor =
-                        "pointer";
-                    document.getElementById(
-                        `buttontext${menuIndex}`
-                    ).style.cursor = "pointer";
+                if (typeof document !== undefined) {
+                    if (
+                        document.getElementById("landingdeco") &&
+                        document.getElementById("landingscreenbuttontext") &&
+                        document.getElementById("landingarrow") &&
+                        loaded
+                    ) {
+                        document.getElementById("landingdeco").style.cursor =
+                            "pointer";
+                        document.getElementById(
+                            "landingscreenbuttontext"
+                        ).style.cursor = "pointer";
+                        document.getElementById("landingarrow").style.cursor =
+                            "pointer";
+                    }
                 }
             }, 800);
         }

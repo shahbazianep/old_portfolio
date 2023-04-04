@@ -66,7 +66,7 @@ export default class MenuItem extends React.Component {
             ],
             easing: "easeInExpo",
         });
-        if (this.props.subscreen == "#contactscreen") {
+        if (this.props.subscreen === "#contactscreen") {
             anime({
                 targets: [
                     "#linkcirc1",

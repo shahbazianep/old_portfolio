@@ -163,6 +163,7 @@ export default class AboutMeScreen extends React.Component {
                     }}
                 >
                     <img
+                        alt={"League of Legends Masters logo"}
                         src={league}
                         style={{
                             cursor: "pointer",
@@ -178,6 +179,7 @@ export default class AboutMeScreen extends React.Component {
                         }
                     ></img>
                     <img
+                        alt={"Spotify logo"}
                         src={spotify}
                         style={{
                             cursor: "pointer",
@@ -191,6 +193,7 @@ export default class AboutMeScreen extends React.Component {
                         }
                     ></img>
                     <img
+                        alt={"TFT character"}
                         src={tft}
                         style={{
                             cursor: "pointer",
