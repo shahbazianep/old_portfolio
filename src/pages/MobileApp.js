@@ -1,5 +1,4 @@
 import * as React from "react";
-import anime from "animejs";
 
 export default class DesktopApp extends React.Component {
     constructor(props) {

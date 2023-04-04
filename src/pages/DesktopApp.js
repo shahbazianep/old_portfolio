@@ -792,11 +792,10 @@ export default class DesktopApp extends React.Component {
                         <BruinSVG color="#FFFAFA" />
                     </div>
                 </div>
-
                 <div
                     style={{
                         position: "absolute",
-                        top: 640,
+                        top: "80%",
                         left: "70%",
                         display: "flex",
                         flexDirection: "row",
@@ -812,7 +811,6 @@ export default class DesktopApp extends React.Component {
                             verticalAlign: "middle",
                             display: "inline-flex",
                             marginRight: 10,
-                            backgroundColor: "red",
                         }}
                     >
                         <div
