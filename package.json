@@ -29,6 +29,7 @@
         "lord-icon-element": "^4.0.3",
         "lottie-web": "^5.10.2",
         "react": "^17.0.1",
+        "react-device-detect": "^2.2.3",
         "react-dom": "^17.0.1",
         "react-scroll-parallax": "^2.4.3",
         "react-social-icons": "^5.15.0",
