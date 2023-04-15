@@ -7,7 +7,7 @@ import "../styles/index.css";
 import { BrowserView, MobileView, isMobile } from "react-device-detect";
 
 const IndexPage = () => {
-    if (isMobile) return <MobileApp />;
+    if (!isMobile) return <MobileApp />;
     else return <DesktopApp />;
 };
 
