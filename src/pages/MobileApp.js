@@ -11,8 +11,11 @@ export default class DesktopApp extends React.Component {
         return (
             <div
                 style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
                     justifyContent: "center",
-                    alignContent: "center",
+                    textAlign: "center",
                     fontSize: 24,
                     fontFamily: "OpenSans-Regular",
                     backgroundColor: "#FFFAFA",
