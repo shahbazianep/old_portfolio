@@ -17,6 +17,8 @@ export default class DesktopApp extends React.Component {
                     fontFamily: "OpenSans-Regular",
                     backgroundColor: "#FFFAFA",
                     color: "#1D102C",
+                    height: "100%",
+                    width: "100%",
                 }}
             >
                 Hello! This website is not yet designed for mobile use. Please
