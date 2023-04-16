@@ -9,7 +9,9 @@ import { BrowserView, MobileView, isMobile } from "react-device-detect";
 const IndexPage = () => {
     const [mob, setMob] = React.useState(false);
     React.useEffect(() => {
-        setMob(isMobile);
+        if (isMobile) {
+            setMob(true);
+        }
     }, []);
 
     return mob ? <MobileApp /> : <DesktopApp />;
