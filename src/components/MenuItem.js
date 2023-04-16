@@ -2,7 +2,9 @@ import * as React from "react";
 import anime from "animejs";
 
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { LordIcon } from "../utils/lord-icon";
+// import { LordIcon } from "../utils/lord-icon";
+import loadable from "@loadable/component";
+const LordIcon = loadable(() => import("../utils/lord-icon"));
 
 export default class MenuItem extends React.Component {
     transitionToDetails = () => {
