@@ -4,10 +4,19 @@ import DesktopApp from "../components/DesktopApp.js";
 import MobileApp from "../components/MobileApp.js";
 import "../styles/index.css";
 
-import { BrowserView, MobileView, isMobile } from "react-device-detect";
+import { BrowserView, MobileView } from "react-device-detect";
 
 const IndexPage = () => {
-    return isMobile ? <MobileApp /> : <DesktopApp />;
+    return (
+        <div style={{ height: "100%" }}>
+            <BrowserView>
+                <DesktopApp />
+            </BrowserView>
+            <MobileView style={{ height: "100%" }}>
+                <MobileApp />
+            </MobileView>
+        </div>
+    );
 };
 
 export default IndexPage;

@@ -19,21 +19,27 @@ const paragraphStyles = {
 
 // markup
 const NotFoundPage = () => {
+    const browser = typeof window !== "undefined" && window;
+
     return (
-        <main style={pageStyles}>
-            <title>Not found</title>
-            <h1 style={headingStyles}>404 Error: Page not found</h1>
-            <p style={paragraphStyles}>
-                Sorry{" "}
-                <span role="img" aria-label="Pensive emoji">
-                    😔
-                </span>{" "}
-                we couldn’t find what you were looking for.
-                <br />
-                <br />
-                <Link to="/">Go home</Link>.
-            </p>
-        </main>
+        <>
+            {browser && (
+                <main style={pageStyles}>
+                    <title>Not found</title>
+                    <h1 style={headingStyles}>404 Error: Page not found</h1>
+                    <p style={paragraphStyles}>
+                        Sorry{" "}
+                        <span role="img" aria-label="Pensive emoji">
+                            😔
+                        </span>{" "}
+                        we couldn’t find what you were looking for.
+                        <br />
+                        <br />
+                        <Link to="/">Go home</Link>.
+                    </p>
+                </main>
+            )}
+        </>
     );
 };
 
