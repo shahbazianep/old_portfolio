@@ -14,7 +14,7 @@ const IndexPage = () => {
         }
     }, []);
 
-    return mob ? <MobileApp /> : <DesktopApp />;
+    return mob ? <DesktopApp /> : <DesktopApp />;
 };
 
 export default IndexPage;
