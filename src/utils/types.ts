@@ -13,6 +13,7 @@ type LordIconProps = {
     trigger?: LordIconTrigger;
     colors?: string;
     delay?: string | number;
+    target?: string;
 };
 
 type LordIconElement = React.DetailedHTMLProps<

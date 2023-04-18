@@ -2,7 +2,7 @@ import * as React from "react";
 import anime from "animejs";
 
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { LordIcon } from "../utils/lord-icon";
+//import { LordIcon } from "../utils/lord-icon";
 
 export default class MenuItem extends React.Component {
     transitionToDetails = () => {
@@ -193,14 +193,14 @@ export default class MenuItem extends React.Component {
                         strokeDasharray={"0 500"}
                     />
                 </svg>
-                <LordIcon
+                {/* <LordIcon
                     id={`image${this.props.menuIndex}`}
                     src={this.props.iconSrc}
                     trigger="hover"
                     colors={{ primary: "#9e9ede", secondary: "#FFFAFA" }}
                     size={100}
                     target={`#bg${this.props.menuIndex}`}
-                />
+                /> */}
                 <div
                     id={`title${this.props.menuIndex}`}
                     style={{
