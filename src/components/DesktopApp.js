@@ -1,19 +1,17 @@
 import * as React from "react";
-// import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import anime from "animejs";
-// import { Button, Menu } from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import ContactScreen from "../components/ContactScreen";
-import ResumeScreen from "../components/ResumeScreen";
-import ExperienceScreen from "../components/ExperienceScreen";
+import ContactScreen from "./ContactScreen";
+import ResumeScreen from "./ResumeScreen";
+import ExperienceScreen from "./ExperienceScreen";
 
-import MenuItem from "../components/MenuItem.js";
+import MenuItem from "./MenuItem.js";
 import {
     ExperienceMenuDetails,
     ResumeMenuDetails,
     AboutMenuDetails,
     ContactMenuDetails,
-} from "../components/Details.js";
+} from "./Details.js";
 
 import {
     BruinSVG,
@@ -21,13 +19,13 @@ import {
     EngineerSVG,
     IntroSVG,
     NameSVG,
-} from "../components/svgs.js";
-import AboutMeScreen from "../components/AboutMeScreen";
+} from "./svgs.js";
+import AboutMeScreen from "./AboutMeScreen";
 
 var animationFinished = false;
 var loaded = false;
 
-export default class App extends React.Component {
+export default class DesktopApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = { landingButtonEnabled: false };
@@ -142,18 +140,21 @@ export default class App extends React.Component {
             opacity: [1, 0],
         });
         setTimeout(() => {
-            if (
-                document.getElementById("landingdeco") &&
-                document.getElementById("landingscreenbuttontext") &&
-                document.getElementById("landingarrow") &&
-                loaded
-            ) {
-                document.getElementById("landingdeco").style.cursor = "pointer";
-                document.getElementById(
-                    "landingscreenbuttontext"
-                ).style.cursor = "pointer";
-                document.getElementById("landingarrow").style.cursor =
-                    "pointer";
+            if (typeof document !== undefined) {
+                if (
+                    document.getElementById("landingdeco") &&
+                    document.getElementById("landingscreenbuttontext") &&
+                    document.getElementById("landingarrow") &&
+                    loaded
+                ) {
+                    document.getElementById("landingdeco").style.cursor =
+                        "pointer";
+                    document.getElementById(
+                        "landingscreenbuttontext"
+                    ).style.cursor = "pointer";
+                    document.getElementById("landingarrow").style.cursor =
+                        "pointer";
+                }
             }
         }, 5000);
     }
@@ -217,7 +218,7 @@ export default class App extends React.Component {
             easing: "easeOutExpo",
         });
 
-        if (dest == "#contactscreen") {
+        if (dest === "#contactscreen") {
             anime({
                 targets: [
                     "#linkcirc1",
@@ -596,18 +597,21 @@ export default class App extends React.Component {
                 opacity: [0, 0.8],
             });
             setTimeout(() => {
-                if (
-                    document.getElementById(`deco${menuIndex}`) &&
-                    document.getElementById(`arrow${menuIndex}`) &&
-                    document.getElementById(`buttontext${menuIndex}`)
-                ) {
-                    document.getElementById(`deco${menuIndex}`).style.cursor =
-                        "pointer";
-                    document.getElementById(`arrow${menuIndex}`).style.cursor =
-                        "pointer";
-                    document.getElementById(
-                        `buttontext${menuIndex}`
-                    ).style.cursor = "pointer";
+                if (typeof document !== undefined) {
+                    if (
+                        document.getElementById("landingdeco") &&
+                        document.getElementById("landingscreenbuttontext") &&
+                        document.getElementById("landingarrow") &&
+                        loaded
+                    ) {
+                        document.getElementById("landingdeco").style.cursor =
+                            "pointer";
+                        document.getElementById(
+                            "landingscreenbuttontext"
+                        ).style.cursor = "pointer";
+                        document.getElementById("landingarrow").style.cursor =
+                            "pointer";
+                    }
                 }
             }, 800);
         }
@@ -788,11 +792,10 @@ export default class App extends React.Component {
                         <BruinSVG color="#FFFAFA" />
                     </div>
                 </div>
-
                 <div
                     style={{
                         position: "absolute",
-                        top: 640,
+                        top: "80%",
                         left: "70%",
                         display: "flex",
                         flexDirection: "row",
@@ -808,7 +811,6 @@ export default class App extends React.Component {
                             verticalAlign: "middle",
                             display: "inline-flex",
                             marginRight: 10,
-                            backgroundColor: "red",
                         }}
                     >
                         <div

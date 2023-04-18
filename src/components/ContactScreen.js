@@ -15,7 +15,7 @@ export default class ContactScreen extends React.Component {
 
     validateName = (value) => {
         let error;
-        if (value == "") {
+        if (value === "") {
             error = "Required field.";
         } else if (!value.includes(" ")) {
             error = "Please provide your first and last name.";
@@ -38,7 +38,7 @@ export default class ContactScreen extends React.Component {
 
     validateMessage = (value) => {
         let error;
-        if (value == "") {
+        if (value === "") {
             error = "Required field.";
         }
         return error;

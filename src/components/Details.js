@@ -1,11 +1,4 @@
 import * as React from "react";
-import { SocialIcon } from "react-social-icons";
-
-var socials = [
-    "https://www.linkedin.com/in/ethanshahbazian/",
-    "https://www.instagram.com/shahbaz.224/",
-    "https://github.com/shahbazianep/",
-];
 
 export const ExperienceMenuDetails = () => {
     return (
