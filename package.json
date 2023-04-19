@@ -1,6 +1,7 @@
 {
     "name": "portfolio",
     "version": "1.0.0",
+    "homepage": "shahbazianep.github.io",
     "private": true,
     "description": "portfolio",
     "author": "Ethan Shahbazian",
@@ -14,7 +15,7 @@
         "build": "gatsby build",
         "serve": "gatsby serve",
         "clean": "gatsby clean",
-        "deploy": "gh-pages -d public -b master"
+        "deploy": "gh-pages -d public"
     },
     "dependencies": {
         "@emailjs/browser": "^3.11.0",
