@@ -15,13 +15,12 @@
         "build": "gatsby build",
         "serve": "gatsby serve",
         "clean": "gatsby clean",
-        "deploy": "gh-pages -d public -b main"
+        "deploy": "gh-pages -d public -b master"
     },
     "dependencies": {
         "@emailjs/browser": "^3.11.0",
         "@emotion/react": "^11.10.6",
         "@emotion/styled": "^11.10.6",
-        "@loadable/component": "^5.15.3",
         "@mui/icons-material": "^5.11.16",
         "@mui/material": "^5.12.1",
         "animejs": "^3.2.1",
